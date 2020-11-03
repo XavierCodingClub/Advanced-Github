@@ -1,18 +1,24 @@
 ##
 # Module to store various algorithms
 #
-# Author: XCC
-# Date: 10/25/2020
+# Author: Luke Sequeira
+# Date: November, 2020
 #
 
 
-def bubbleSort(list):
-    return list
+def bubbleSort(lst):
+    lnt = len(lst)
+    for i in range(lnt):
+        for j in range(lnt - 1):
+            if(lst[j] >  lst[j+1]):
+                lst[j], lst[j+1] = lst[j+1], lst[j] #switch j and j + 1
+    
+    return lst
 
 
-def insertionSort(list):
-    return list
+def insertionSort(lst2):
+    return lst2
 
 
-def selectionSort(list):
-    return list
+def selectionSort(lst3):
+    return lst3
