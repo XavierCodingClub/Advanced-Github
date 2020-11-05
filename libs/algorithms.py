@@ -7,12 +7,12 @@
 
 
 def bubbleSort(ls):
-    return ls
+    return ls.copy()
 
 
 def insertionSort(ls):
-    return ls
+    return ls.copy()
 
 
 def selectionSort(ls):
-    return ls
+    return ls.copy()
