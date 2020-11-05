@@ -6,13 +6,16 @@
 #
 
 
-def bubbleSort(list):
-    return list
+def bubbleSort(ls):
+    ls = ls.copy()
+    return ls
 
 
-def insertionSort(list):
-    return list
+def insertionSort(ls):
+    ls = ls.copy()
+    return ls
 
 
-def selectionSort(list):
-    return list
+def selectionSort(ls):
+    ls = ls.copy()
+    return ls
