@@ -40,3 +40,37 @@ def selectionSort(a):
         lst[key], lst[i] = lst[i], lst[key]
     return lst
 
+def mergeSort(a):
+    if(len(a) > 1): #non trivially-sorted list
+        mdle = len(a)//2 #find the mid-point of the list
+        L = a[:mdle] #left half of array
+        R = a[mdle:] #right half of array
+
+        #Call merge sort on the 2 halfs
+        mergeSort(L)
+        mergeSort(R)
+
+        #merge the 2 sorted halfs
+        i = 0
+        j = 0
+        k = 0
+        while(i < len(L) and j < len(R)): #this loop runs len(a) times
+            if(L[i] < R[j]):
+                a[k] = L[i]
+                i += 1
+                k+=1
+            else:
+                a[k] = R[j]
+                j += 1
+                k+=1
+        # Checking if any element was left
+        while i < len(L):
+            a[k] = L[i]
+            i += 1
+            k += 1
+ 
+        while j < len(R):
+            a[k] = R[j]
+            j += 1
+            k += 1
+    return a

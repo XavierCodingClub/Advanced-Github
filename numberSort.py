@@ -1,7 +1,7 @@
 ##
 # Program to accept and sort numbers in a list, aswell as measure how long it took
 #
-# Author: XCC
+# Author: Luke Sequeira
 # Date: 10/25/2020
 
 from libs import algorithms
@@ -65,6 +65,20 @@ print("Time: " + str(time) + " micro sec")
 # Output sorted
 foo = numList
 print("Sorted with selection sort" + str(algorithms.selectionSort(foo)))
+
+# Time the sorting with timeit.timeit
+time = timeit.timeit('algorithms.selectionSort(foo)',
+                     'from __main__ import algorithms, foo')
+
+# Output the time it took in micro seconds
+print("Time: " + str(time) + " micro sec")
+
+
+## Merge sort ##
+
+# Output sorted
+foo = numList
+print("Sorted with merge sort" + str(algorithms.mergeSort(foo.copy())))
 
 # Time the sorting with timeit.timeit
 time = timeit.timeit('algorithms.selectionSort(foo)',
