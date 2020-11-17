@@ -1,7 +1,7 @@
 ##
 # Program to accept and sort numbers in a list, aswell as measure how long it took
 #
-# Author: XCC
+# Author: Luke Sequeira
 # Date: 10/25/2020
 
 from libs import algorithms
@@ -36,11 +36,12 @@ print("Unsorted list:" + str(numList))
 ## Bubble sort ##
 
 # Output sorted
-print("Sorted with bubble sort" + str(algorithms.bubbleSort(numList)))
+foo = numList
+print("Sorted with bubble sort" + str(algorithms.bubbleSort(foo)))
 
 # Time the sorting with timeit.timeit
-time = timeit.timeit('algorithms.bubbleSort(numList)',
-                     'from __main__ import algorithms, numList')
+time = timeit.timeit('algorithms.bubbleSort(foo)',
+                     'from __main__ import algorithms, foo')
 
 # Output the time it took in micro seconds
 print("Time: " + str(time) + " micro sec")
@@ -49,11 +50,12 @@ print("Time: " + str(time) + " micro sec")
 ## Insertion sort ##
 
 # Output sorted
-print("Sorted with insertion sort" + str(algorithms.insertionSort(numList)))
+foo = numList
+print("Sorted with insertion sort" + str(algorithms.insertionSort(foo)))
 
 # Time the sorting with timeit.timeit
-time = timeit.timeit('algorithms.insertionSort(numList)',
-                     'from __main__ import algorithms, numList')
+time = timeit.timeit('algorithms.insertionSort(foo)',
+                     'from __main__ import algorithms, foo')
 
 # Output the time it took in micro seconds
 print("Time: " + str(time) + " micro sec")
@@ -61,11 +63,26 @@ print("Time: " + str(time) + " micro sec")
 ## Selection sort ##
 
 # Output sorted
-print("Sorted with selection sort" + str(algorithms.selectionSort(numList)))
+foo = numList
+print("Sorted with selection sort" + str(algorithms.selectionSort(foo)))
 
 # Time the sorting with timeit.timeit
-time = timeit.timeit('algorithms.selectionSort(numList)',
-                     'from __main__ import algorithms, numList')
+time = timeit.timeit('algorithms.selectionSort(foo)',
+                     'from __main__ import algorithms, foo')
+
+# Output the time it took in micro seconds
+print("Time: " + str(time) + " micro sec")
+
+
+## Merge sort ##
+
+# Output sorted
+foo = numList
+print("Sorted with merge sort" + str(algorithms.mergeSort(foo.copy())))
+
+# Time the sorting with timeit.timeit
+time = timeit.timeit('algorithms.selectionSort(foo)',
+                     'from __main__ import algorithms, foo')
 
 # Output the time it took in micro seconds
 print("Time: " + str(time) + " micro sec")
